@@ -4,8 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table (name = "tbl_renewalnoticetocomply")
 public class RenewalbpNoticeComplyEntity {
 	
 	@Id
@@ -18,16 +20,21 @@ public class RenewalbpNoticeComplyEntity {
 	private String address;
 	private String nature_business;
 	private String type_occupancy;
+	private String contact_no;
 	private String administrative_fine;
-	private int status;
+	private String status;
 	
 	
 	//constructor
 	public RenewalbpNoticeComplyEntity() {}
 
 
+	
+	
+
 	public RenewalbpNoticeComplyEntity(int renewnc_id, int bspermit_no, String permittee, String business_name,
-			String address, String nature_business, String type_occupancy, String administrative_fine, int status) {
+			String address, String nature_business, String type_occupancy, String contact_no,
+			String administrative_fine, String status) {
 		super();
 		this.renewnc_id = renewnc_id;
 		this.bspermit_no = bspermit_no;
@@ -36,11 +43,13 @@ public class RenewalbpNoticeComplyEntity {
 		this.address = address;
 		this.nature_business = nature_business;
 		this.type_occupancy = type_occupancy;
+		this.contact_no = contact_no;
 		this.administrative_fine = administrative_fine;
 		this.status = status;
 	}
 
-	
+
+
 
 	//getters and setters
 	public int getRenewnc_id() {
@@ -48,9 +57,15 @@ public class RenewalbpNoticeComplyEntity {
 	}
 
 
+
+
+
 	//public void setRenewnc_id(int renewnc_id) {
 		//this.renewnc_id = renewnc_id;
 	//}
+
+
+
 
 
 	public int getBspermit_no() {
@@ -58,9 +73,15 @@ public class RenewalbpNoticeComplyEntity {
 	}
 
 
+
+
+
 	public void setBspermit_no(int bspermit_no) {
 		this.bspermit_no = bspermit_no;
 	}
+
+
+
 
 
 	public String getPermittee() {
@@ -68,9 +89,15 @@ public class RenewalbpNoticeComplyEntity {
 	}
 
 
+
+
+
 	public void setPermittee(String permittee) {
 		this.permittee = permittee;
 	}
+
+
+
 
 
 	public String getBusiness_name() {
@@ -78,9 +105,15 @@ public class RenewalbpNoticeComplyEntity {
 	}
 
 
+
+
+
 	public void setBusiness_name(String business_name) {
 		this.business_name = business_name;
 	}
+
+
+
 
 
 	public String getAddress() {
@@ -88,9 +121,15 @@ public class RenewalbpNoticeComplyEntity {
 	}
 
 
+
+
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+
+
 
 
 	public String getNature_business() {
@@ -98,9 +137,15 @@ public class RenewalbpNoticeComplyEntity {
 	}
 
 
+
+
+
 	public void setNature_business(String nature_business) {
 		this.nature_business = nature_business;
 	}
+
+
+
 
 
 	public String getType_occupancy() {
@@ -108,9 +153,31 @@ public class RenewalbpNoticeComplyEntity {
 	}
 
 
+
+
+
 	public void setType_occupancy(String type_occupancy) {
 		this.type_occupancy = type_occupancy;
 	}
+
+
+
+
+
+	public String getContact_no() {
+		return contact_no;
+	}
+
+
+
+
+
+	public void setContact_no(String contact_no) {
+		this.contact_no = contact_no;
+	}
+
+
+
 
 
 	public String getAdministrative_fine() {
@@ -118,19 +185,30 @@ public class RenewalbpNoticeComplyEntity {
 	}
 
 
+
+
+
 	public void setAdministrative_fine(String administrative_fine) {
 		this.administrative_fine = administrative_fine;
 	}
 
 
-	public int getStatus() {
+
+
+
+	public String getStatus() {
 		return status;
 	}
 
 
-	public void setStatus(int status) {
+
+
+
+	public void setStatus(String status) {
 		this.status = status;
 	}
+
+
 	
 	
 

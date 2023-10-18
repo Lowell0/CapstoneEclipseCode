@@ -4,8 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table (name= "tbl_newbpcorrectviolation")
 public class NewbpNoticeCorrectViolationEntity {
 	
 	@Id
@@ -18,14 +20,18 @@ public class NewbpNoticeCorrectViolationEntity {
 	private String address;
 	private String nature_business;
 	private String type_occupancy;
+	private String contact_no;
 	private String administrative_fine;
-	private int status;
+	private String status;
 	
 	//constructor
 	public NewbpNoticeCorrectViolationEntity() {}
-	public NewbpNoticeCorrectViolationEntity(int newncv_id, int bspermit_no, String permittee,
-			String business_name, String address, String nature_business, String type_occupancy,
-			String administrative_fine, int status) {
+	
+	
+	
+	public NewbpNoticeCorrectViolationEntity(int newncv_id, int bspermit_no, String permittee, String business_name,
+			String address, String nature_business, String type_occupancy, String contact_no,
+			String administrative_fine, String status) {
 		super();
 		this.newncv_id = newncv_id;
 		this.bspermit_no = bspermit_no;
@@ -34,69 +40,132 @@ public class NewbpNoticeCorrectViolationEntity {
 		this.address = address;
 		this.nature_business = nature_business;
 		this.type_occupancy = type_occupancy;
+		this.contact_no = contact_no;
 		this.administrative_fine = administrative_fine;
 		this.status = status;
 	}
-	
+
+
 	//getters and setters
-	public int getNewnoticecomply_id() {
+	public int getNewncv_id() {
 		return newncv_id;
 	}
-	//public void setNewnoticecomply_id(int newnoticecomply_id) {
-		//this.newnoticecomply_id = newnoticecomply_id;
+
+
+
+	//public void setNewncv_id(int newncv_id) {
+		//this.newncv_id = newncv_id;
 	//}
+
+
+
 	public int getBspermit_no() {
 		return bspermit_no;
 	}
+
+
+
 	public void setBspermit_no(int bspermit_no) {
 		this.bspermit_no = bspermit_no;
 	}
+
+
+
 	public String getPermittee() {
 		return permittee;
 	}
+
+
+
 	public void setPermittee(String permittee) {
 		this.permittee = permittee;
 	}
+
+
+
 	public String getBusiness_name() {
 		return business_name;
 	}
+
+
+
 	public void setBusiness_name(String business_name) {
 		this.business_name = business_name;
 	}
+
+
+
 	public String getAddress() {
 		return address;
 	}
+
+
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+
+
 	public String getNature_business() {
 		return nature_business;
 	}
+
+
+
 	public void setNature_business(String nature_business) {
 		this.nature_business = nature_business;
 	}
+
+
+
 	public String getType_occupancy() {
 		return type_occupancy;
 	}
+
+
+
 	public void setType_occupancy(String type_occupancy) {
 		this.type_occupancy = type_occupancy;
 	}
+
+
+
+	public String getContact_no() {
+		return contact_no;
+	}
+
+
+
+	public void setContact_no(String contact_no) {
+		this.contact_no = contact_no;
+	}
+
+
+
 	public String getAdministrative_fine() {
 		return administrative_fine;
 	}
+
+
+
 	public void setAdministrative_fine(String administrative_fine) {
 		this.administrative_fine = administrative_fine;
 	}
-	public int getStatus() {
+
+
+
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(int status) {
+
+
+
+	public void setStatus(String status) {
 		this.status = status;
 	}
-	
-	
-	
-	
-	
+
+
+
 
 }

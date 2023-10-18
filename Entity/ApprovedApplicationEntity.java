@@ -1,6 +1,6 @@
 package com.bfpoms.bfpoms.Entity;
 
-import java.util.Set;
+//import java.util.Set;
 
 //import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -28,6 +28,8 @@ public class ApprovedApplicationEntity {
 	private int inspection_no;
 	private String date_fsic;
 	private String status;
+	private String recommendations;
+	
 	
 	//@OneToMany(cascade = CascadeType.MERGE)
 	//private Set<NewApplicationEntity> NewApplication;
@@ -37,9 +39,11 @@ public class ApprovedApplicationEntity {
 	//constructor
 	public ApprovedApplicationEntity() {}
 
+	
+	
 	public ApprovedApplicationEntity(int approved_id, int application_no, int bldgpermit_no, String date_received,
 			String applicants_name, String project_name, String location, int contact_no, int fees, int inspection_no,
-			String date_fsic, String status, Set<NewApplicationEntity> newApplication) {
+			String date_fsic, String status, String recommendations) {
 		super();
 		this.approved_id = approved_id;
 		this.application_no = application_no;
@@ -53,114 +57,168 @@ public class ApprovedApplicationEntity {
 		this.inspection_no = inspection_no;
 		this.date_fsic = date_fsic;
 		this.status = status;
-		//NewApplication = newApplication;
+		this.recommendations = recommendations;
 	}
-	
+
+
+
 	//getters and setters
 	public int getApproved_id() {
 		return approved_id;
 	}
 
-	public void setApproved_id(int approved_id) {
-		this.approved_id = approved_id;
-	}
+
+
+	//public void setApproved_id(int approved_id) {
+		//this.approved_id = approved_id;
+	//}
+
+
 
 	public int getApplication_no() {
 		return application_no;
 	}
 
+
+
 	public void setApplication_no(int application_no) {
 		this.application_no = application_no;
 	}
+
+
 
 	public int getBldgpermit_no() {
 		return bldgpermit_no;
 	}
 
+
+
 	public void setBldgpermit_no(int bldgpermit_no) {
 		this.bldgpermit_no = bldgpermit_no;
 	}
+
+
 
 	public String getDate_received() {
 		return date_received;
 	}
 
+
+
 	public void setDate_received(String date_received) {
 		this.date_received = date_received;
 	}
+
+
 
 	public String getApplicants_name() {
 		return applicants_name;
 	}
 
+
+
 	public void setApplicants_name(String applicants_name) {
 		this.applicants_name = applicants_name;
 	}
+
+
 
 	public String getProject_name() {
 		return project_name;
 	}
 
+
+
 	public void setProject_name(String project_name) {
 		this.project_name = project_name;
 	}
+
+
 
 	public String getLocation() {
 		return location;
 	}
 
+
+
 	public void setLocation(String location) {
 		this.location = location;
 	}
+
+
 
 	public int getContact_no() {
 		return contact_no;
 	}
 
+
+
 	public void setContact_no(int contact_no) {
 		this.contact_no = contact_no;
 	}
+
+
 
 	public int getFees() {
 		return fees;
 	}
 
+
+
 	public void setFees(int fees) {
 		this.fees = fees;
 	}
+
+
 
 	public int getInspection_no() {
 		return inspection_no;
 	}
 
+
+
 	public void setInspection_no(int inspection_no) {
 		this.inspection_no = inspection_no;
 	}
+
+
 
 	public String getDate_fsic() {
 		return date_fsic;
 	}
 
+
+
 	public void setDate_fsic(String date_fsic) {
 		this.date_fsic = date_fsic;
 	}
+
+
 
 	public String getStatus() {
 		return status;
 	}
 
+
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
 
-	//public Set<NewApplicationEntity> getNewApplication() {
-		//return NewApplication;
-	//}
 
-	//public void setNewApplication(Set<NewApplicationEntity> newApplication) {
-		//NewApplication = newApplication;
-	//}
 
-	
+	public String getRecommendations() {
+		return recommendations;
+	}
+
+
+
+	public void setRecommendations(String recommendations) {
+		this.recommendations = recommendations;
+	}
+
+
 }
+	
+	
 

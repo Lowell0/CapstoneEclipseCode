@@ -1,11 +1,16 @@
 package com.bfpoms.bfpoms.Service;
 
+//import java.time.LocalDateTime;
+//import java.util.ArrayList;
+//import java.util.HashMap;
 import java.util.List;
+//import java.util.Map;
 import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+//import com.bfpoms.bfpoms.Entity.UserActivityEntity;
 import com.bfpoms.bfpoms.Entity.UserEntity;
 import com.bfpoms.bfpoms.Repository.UserRepository;
 
@@ -29,6 +34,7 @@ public class UserService {
 	//create or insert
 	public UserEntity insertUser(UserEntity user) {
 		return urepo.save(user);
+		
 	}
 	
 	//read all user records
@@ -89,4 +95,17 @@ public class UserService {
 	
 	}	
 	
-}
+	// public Map<String, Object> loadUserByAccountNo(int account_no) throws Exception {
+	  //      UserEntity user = urepo.findByAccountno(account_no);
+	    //    Map<String, Object> result = new HashMap<>();
+
+	      //  if (user == null) {
+	      //      throw new Exception("User not found with account number: " + account_no);
+	        //}
+
+	        //result.put("user", user);
+	        //result.put("message", "User found successfully.");
+	        //return result;
+	    //}
+	}
+	   

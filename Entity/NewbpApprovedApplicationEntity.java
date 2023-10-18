@@ -4,8 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table (name = "tbl_newbpapproved")
 public class NewbpApprovedApplicationEntity {
 	
 	@Id
@@ -131,12 +133,7 @@ public class NewbpApprovedApplicationEntity {
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
-	
-	
-	
-	
-	
-	
-	
+
+
 
 }

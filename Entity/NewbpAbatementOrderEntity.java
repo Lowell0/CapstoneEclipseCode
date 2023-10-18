@@ -4,8 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table (name= "tbl_newbpabatementorder")
 public class NewbpAbatementOrderEntity {
 
 	@Id
@@ -18,14 +20,16 @@ public class NewbpAbatementOrderEntity {
 	private String address;
 	private String nature_business;
 	private String type_occupancy;
+	private String contact_no;
 	private String administrative_fine;
-	private int status;
+	private String status;
 	
 	//constructor
 	public NewbpAbatementOrderEntity() {}
 
 	public NewbpAbatementOrderEntity(int newao_id, int bspermit_no, String permittee, String business_name,
-			String address, String nature_business, String type_occupancy, String administrative_fine, int status) {
+			String address, String nature_business, String type_occupancy, String contact_no,
+			String administrative_fine, String status) {
 		super();
 		this.newao_id = newao_id;
 		this.bspermit_no = bspermit_no;
@@ -34,6 +38,7 @@ public class NewbpAbatementOrderEntity {
 		this.address = address;
 		this.nature_business = nature_business;
 		this.type_occupancy = type_occupancy;
+		this.contact_no = contact_no;
 		this.administrative_fine = administrative_fine;
 		this.status = status;
 	}
@@ -95,6 +100,14 @@ public class NewbpAbatementOrderEntity {
 		this.type_occupancy = type_occupancy;
 	}
 
+	public String getContact_no() {
+		return contact_no;
+	}
+
+	public void setContact_no(String contact_no) {
+		this.contact_no = contact_no;
+	}
+
 	public String getAdministrative_fine() {
 		return administrative_fine;
 	}
@@ -103,15 +116,15 @@ public class NewbpAbatementOrderEntity {
 		this.administrative_fine = administrative_fine;
 	}
 
-	public int getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(int status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
-	
-	
+
+
 	
 	
 }
